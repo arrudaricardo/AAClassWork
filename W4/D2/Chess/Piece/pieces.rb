@@ -1,19 +1,28 @@
 class Pieces
-  def initialize(color, board, pos)
+  def initialize(color, board, initial_pos)
     @color = color
     @board = board # fix later
-    @pos = []
+    @pos = initial_pos
   end
 
   def to_s 
+    @color.to_s
   end 
+
   def empty? 
+    # what do you mean?...
   end 
-  def valid_moves 
+
+  def valid_moves  #all the possible moves
+
   end 
+
   def pos=(val)
+    @pos = val
   end 
+
   def symbol 
+    "Piece"
   end 
 
   Private 
