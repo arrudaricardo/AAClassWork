@@ -1,4 +1,5 @@
 class Pieces
+  attr_reader :pos
   def initialize(color, board, initial_pos)
     @color = color
     @board = board # fix later
@@ -16,7 +17,8 @@ class Pieces
   end 
 
   def valid_moves  #all the possible moves
-
+    # should return an array of positions
+    # calls subclass move_dirs
   end 
 
   def pos=(val)
