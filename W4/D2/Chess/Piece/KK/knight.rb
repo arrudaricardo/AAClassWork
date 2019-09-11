@@ -9,4 +9,8 @@ class Knight < Pieces
   end
 
 
+  def move_diffs
+    [2,1,-2,-1].permutation(2).to_a.select { |arr| arr.sum != 0 }
+  end
+
 end

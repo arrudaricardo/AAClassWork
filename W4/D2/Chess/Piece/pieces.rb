@@ -105,6 +105,7 @@ end
 module Stepable 
 
   def moves
+    # can call move_diffs
 
   end
 
