@@ -6,8 +6,7 @@ class Knight < Pieces
 
   def symbol
     "Knight"
-    ♞
-    ♘
   end
+
 
 end

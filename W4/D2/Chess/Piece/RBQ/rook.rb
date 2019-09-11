@@ -8,4 +8,9 @@ class Rook < Pieces
     "Rook"
   end
 
+  # @return [Array] All possible dir or moves?
+  def move_dirs
+    horizontal_dirs
+  end
+
 end
