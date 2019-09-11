@@ -27,7 +27,8 @@ class Board
 
   
   def valid_pos?(piece)
-  end
+ #piece on board
+ end
   
   def add_piece(piece, pos)
   end  

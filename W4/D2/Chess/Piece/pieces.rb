@@ -11,6 +11,8 @@ class Pieces
 
   def empty? 
     # what do you mean?...
+    # If symbol is not null? 
+    symbol == "Null"
   end 
 
   def valid_moves  #all the possible moves

@@ -5,7 +5,7 @@ class Bishop < Pieces
   include Slideable  # Raise Error if call horizontal dir
 
   def symbol
-    "Bishop"
+   # "Bishop" cntrl + cmd + space for  ♝
   end
-  
+
 end
