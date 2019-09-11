@@ -110,4 +110,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# ZIP files
+*.zip
+*.tor
+
 # End of https://www.gitignore.io/api/ruby,macos,windows
