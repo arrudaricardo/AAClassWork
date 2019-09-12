@@ -76,8 +76,33 @@ class Cursor
   end
 
   def handle_key(key)
+    case key 
+    when :return || :space 
+      @cursor_pos
+    when :left || :right || :up || :down
+      self.update_pos(key)
+    when :ctrl_c
+      # quit 
+      Process.exit(0)
+    end
   end
 
   def update_pos(diff)
+    x, y = @cursor_pos
+    case diff 
+    when :left 
+      @cursor_pos = [x, 7] if y == 0
+      @cursor_pos = [x, y - 1 ]
+    when :right
+      @cursor_pos = [x, 0] if y == 7
+      @cursor_pos = [x, y + 1 ]
+    when :up 
+      @cursor_pos = [0, y] if x == 7
+      @cursor_pos = [x + 1, y]
+    when :down
+      @cursor_pos = [x + 1, y] if x == 7
+      @cursor_pos = [0, y]
+    end
+    # if over edge of board, jump across. 
   end
 end

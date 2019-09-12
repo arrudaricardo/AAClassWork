@@ -1,5 +1,5 @@
 # file requirements
-require_relative(" ../Piece/pieces.rb")
+require_relative("../Piece/pieces.rb")
 require_relative("../Piece/MISC/nullpiece.rb")
 
 class Board
