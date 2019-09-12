@@ -50,7 +50,7 @@ class Pieces
     "Piece"
   end 
 
-  Private 
+  # Private 
   def move_into_check?(end_pos) 
   end
 end 
@@ -98,18 +98,13 @@ module Slideable # need to know what direction piece can move
 
 end 
 
-# Knight and King
-
-    # KK CAN TRAVEL TO 8 SPACES UNOBSTRUCTED
-
 module Stepable 
 
   def moves
-    # can call move_diffs
-
+    move_diffs
   end
 
-  Private
+  private
   def move_diffs
   end
 end 

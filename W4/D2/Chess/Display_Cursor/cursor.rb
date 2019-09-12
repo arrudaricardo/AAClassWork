@@ -77,13 +77,20 @@ class Cursor
 
   def handle_key(key)
     case key 
-    when :return || :space 
-      @cursor_pos
-    when :left || :right || :up || :down
-      self.update_pos(key)
-    when :ctrl_c
-      # quit 
-      Process.exit(0)
+      when :return
+        @cursor_pos
+      when :space
+        @cursor_pos
+      when :left
+        update_pos(key)
+      when :right
+        update_pos(key)
+      when :up
+        update_pos(key)
+      when :down
+        update_pos(key)
+      when :ctrl_c
+        Process.exit(0)
     end
   end
 
