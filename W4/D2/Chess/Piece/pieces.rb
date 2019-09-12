@@ -1,14 +1,12 @@
 class Pieces
+   #♜ ♖ 
   attr_reader :pos
+
   def initialize(color, board, initial_pos)
     @color = color
     @board = board # fix later
     @pos = initial_pos
   end
-# SYMBOLS FOR EACH PIECE
-    #EX ROOK: ♜ ♖ 
-    # we'll use this in the display only. This way we can keep the pieces logic simpler
-    # and throw the above into the display method.
 
   def to_s 
     @color.to_s
@@ -52,60 +50,6 @@ class Pieces
 
   # Private 
   def move_into_check?(end_pos) 
-  end
-end 
-
-# Bishop Rook and Queen
-module Slideable # need to know what direction piece can move 
-  HORIZONTAL_DIRS =   [[1,0], [-1,0], [0,1],  [0, -1]]# fill in later
-  DIAGONAL_DIRS   =   [[1,1], [1,-1], [-1,1], [-1,-1]]
-
-  # Misc Notes
-  # stop slideable if another piece is in the way or end of board...?
-
-  # horiz (and vertical)
-  def horizontal_dirs 
-    HORIZONTAL_DIRS
-  end
-  
-  # diagonal
-  def diagonal_dirs 
-    DIAGONAL_DIRS
-  end
-
-  def move_dirs # this is only asking for directions piece can go in...
-  end 
-
-    # @return [[dir1 positions], [dir2 positions]... ] All the possible moves until the end_pos
-    def moves
-      possible_moves = []
-      moves_dirs.each do |pos|
-        possible_moves << grow_unblocked_moves_in_dir(*pos)
-      end
-      possible_moves   # return remaining possible moves...
-    end
-
-
-  # @return [Array] All possible moves in one direction, including OFF THE BOARD
-  def grow_unblocked_moves_in_dir(dx, dy) 
-    unb_mvs = []
-      x,y = pos # calls pieces position
-      (1..7).each do |mult|
-        unb_mvs << [  x + mult*dx ,  y + mult*dy ] 
-      end
-    unb_mvs
-  end
-
-end 
-
-module Stepable 
-
-  def moves
-    move_diffs
-  end
-
-  private
-  def move_diffs
   end
 end 
 
