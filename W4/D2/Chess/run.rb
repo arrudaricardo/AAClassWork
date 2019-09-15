@@ -1,4 +1,4 @@
-require_relative "./Display_Cursor/display.rb"
+require_relative "display/display.rb"
 
 
 # if __FILE__ == $PROGRAM_NAME
