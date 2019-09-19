@@ -1,3 +1,4 @@
-### Ricardo de Arruda AppAcademy Bootcamp ClassWork projects.
+### AppAcademy Bootcamp
+Repository for ClassWork Projects 
 
 
