@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_25_233401) do
+ActiveRecord::Schema.define(version: 2019_09_26_222822) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2019_09_25_233401) do
   create_table "artwork_shares", force: :cascade do |t|
     t.integer "artwork_id"
     t.integer "viewer_id"
+    t.integer "favorite_user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -26,9 +27,34 @@ ActiveRecord::Schema.define(version: 2019_09_25_233401) do
     t.string "title", null: false
     t.string "image_url", null: false
     t.integer "artist_id", null: false
+    t.boolean "favorite"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["artist_id", "title"], name: "index_artworks_on_artist_id_and_title", unique: true
+  end
+
+  create_table "collects", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "artwork_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["artwork_id", "user_id"], name: "index_collects_on_artwork_id_and_user_id", unique: true
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string "body", null: false
+    t.integer "user_id"
+    t.integer "artwork_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "liked_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "liked_type"
+    t.index ["user_id", "liked_id"], name: "index_likes_on_user_id_and_liked_id"
   end
 
   create_table "users", force: :cascade do |t|

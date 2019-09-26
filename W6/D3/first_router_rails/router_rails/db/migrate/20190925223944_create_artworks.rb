@@ -4,6 +4,7 @@ class CreateArtworks < ActiveRecord::Migration[5.2]
       t.string :title, null: false
       t.string :image_url, null: false
       t.integer :artist_id, null: false
+      t.boolean :favorite
       t.timestamps
     end
 
