@@ -13,3 +13,9 @@
 .section-nav-ul li:hover  {
   background: $light-gray;
 }
+
+@media all and (max-width: 1000px) {
+  .section-nav {
+    display: none;
+  }
+}

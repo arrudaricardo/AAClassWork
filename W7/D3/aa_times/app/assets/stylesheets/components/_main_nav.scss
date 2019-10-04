@@ -39,15 +39,24 @@
   font-size: 15px;
 }
 
-
-.right-nav i {
-
-}
-
 .fa {
   padding-right: 10px;
 }
 
 .fas {
   font-size: 25px;
+}
+
+@media all and (max-width:1000px) {
+  .right-nav  {
+    display: none;
+  }
+
+  .left-nav {
+    margin: 0px;
+  }
+
+  .main-nav span {
+    font-size: 12px;
+  }
 }
