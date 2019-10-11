@@ -1,0 +1,21 @@
+
+.section-nav-ul  {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid grey;
+  padding-top: 5px;
+}
+
+.section-nav-ul li  {
+  margin: 15px;
+}
+
+.section-nav-ul li:hover  {
+  background: $light-gray;
+}
+
+@media all and (max-width: 1000px) {
+  .section-nav {
+    display: none;
+  }
+}
