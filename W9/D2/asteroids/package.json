@@ -1,0 +1,19 @@
+{
+  "name": "asteroids",
+  "version": "1.0.0",
+  "description": "Asteroids AppAcademy",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack ./src/index.js -o bundle.js --watch --mode=development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
+  },
+  "dependencies": {
+    "keymaster": "^1.6.2"
+  }
+}
