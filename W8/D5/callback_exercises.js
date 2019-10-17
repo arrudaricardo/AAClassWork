@@ -115,5 +115,9 @@ const interval = setInterval(() => {
 
 
 
-  //-
+  //---------------------------------------------------------------------------------------
+  
+  Function.prototype.myDebounce = function(){
+    
+  }
   
