@@ -1,0 +1,8 @@
+{
+  "name": "jbuilder_demo",
+  "private": true,
+  "dependencies": {},
+  "script": {
+    "start": "webpack --watch --mode=development"
+  }
+}
